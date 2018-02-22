@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link, { withPrefix } from 'gatsby-link'
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class Navbar extends React.Component {
           <div className="navbar-start">
             <Link className="navbar-item" to="/">Home</Link>
             <Link className="navbar-item" to="#">Blog</Link>
-            <Link className="navbar-item" to="#">Résumé</Link>
+            <a className="navbar-item" href={withPrefix('/damiengonot_resume.pdf')} target="_blank">Résumé</a>
           </div>
           <div className="navbar-end">
             <Link className="navbar-item" to="/about">About</Link>
