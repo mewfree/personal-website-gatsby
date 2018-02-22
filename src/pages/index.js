@@ -7,7 +7,7 @@ const IndexPage = () => (
       Hi everybody
     </h1>
     <p>
-      Now go build something great.
+      My name is Damien Gonot.
     </p>
     <Link to="/page-2/">
       Go to page 2

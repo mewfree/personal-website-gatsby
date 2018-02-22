@@ -19,7 +19,9 @@ const TemplateWrapper = ({ children }) => (
     <Header />
     <section className="section">
       <div className="container">
-        {children()}
+        <div className="content">
+          {children()}
+        </div>
       </div>
     </section>
   </div>
