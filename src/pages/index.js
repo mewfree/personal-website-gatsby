@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 
 const IndexPage = () => (
   <div>
-    <h1 className="title">
+    <h1>
       Introduction
     </h1>
     <p>
@@ -12,9 +12,14 @@ const IndexPage = () => (
     <p>
       Proudly living in Montréal ❤️
     </p>
-    <Link to="/page-2/">
-      Go to page 2
-    </Link>
+    <h1>
+      Projects I contributed to
+    </h1>
+    <ul>
+      <li>
+        <a href="https://github.com/kiasaki/ry-v02">ry, a basic modal text editor, written in Chicken Scheme</a>
+      </li>
+    </ul>
   </div>
 )
 

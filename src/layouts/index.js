@@ -8,13 +8,12 @@ import './index.scss'
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet
-      title="Damien Gonot"
-      meta={[
-        { name: 'description', content: `Damien Gonot's personal website (${new Date().getFullYear()})` },
-        { name: 'keywords', content: 'damien, gonot, damien gonot, personal' },
-      ]}
-    />
+    <Helmet>
+      <title>Damien Gonot</title>
+      <meta name="description" content={`Damien Gonot's personal website (${new Date().getFullYear()})`} />
+      <meta name="keywords" content="damien, gonot, damien gonot, personal" />
+      <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js" />
+    </Helmet>
     <Navbar />
     <Header />
     <section className="section">
