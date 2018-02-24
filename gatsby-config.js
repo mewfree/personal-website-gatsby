@@ -23,6 +23,14 @@ module.exports = {
           windows: false
         }
       }
-    }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './src/pages/blog',
+        name: 'markdown-pages',
+      },
+    },
+    'gatsby-transformer-remark',
   ],
 };

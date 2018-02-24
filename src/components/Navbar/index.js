@@ -30,7 +30,7 @@ class Navbar extends React.Component {
         >
           <div className="navbar-start">
             <Link className="navbar-item" to="/">Home</Link>
-            <Link className="navbar-item" to="#">Blog</Link>
+            <Link className="navbar-item" to="/blog">Blog</Link>
             <a className="navbar-item" href={withPrefix('/damiengonot_resume.pdf')} target="_blank">Résumé</a>
           </div>
           <div className="navbar-end">
