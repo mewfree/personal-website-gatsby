@@ -29,12 +29,20 @@ class Navbar extends React.Component {
           onClick={e => this.setState({burger_active: false})}
         >
           <div className="navbar-start">
-            <Link className="navbar-item" to="/">Home</Link>
-            <Link className="navbar-item" to="/blog">Blog</Link>
-            <a className="navbar-item" href={withPrefix('/damiengonot_resume.pdf')} target="_blank">Résumé</a>
+            <Link className="navbar-item" to="/">
+              Home
+            </Link>
+            <Link className="navbar-item" to="/blog">
+              Blog
+            </Link>
+            <a className="navbar-item" href={withPrefix('/damiengonot_resume.pdf')} target="_blank">
+              Résumé 💾
+            </a>
           </div>
           <div className="navbar-end">
-            <Link className="navbar-item" to="/about">About</Link>
+            <Link className="navbar-item" to="/about">
+              About
+            </Link>
           </div>
         </div>
       </nav>
