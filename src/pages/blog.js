@@ -1,13 +1,19 @@
 import React from 'react'
 import PostLink from '../components/PostLink'
+import Helmet from 'react-helmet'
 
 const Blog = ({ data: { allMarkdownRemark: { edges } } }) => {
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
 
   return (
     <div className="has-text-centered">
+      <Helmet>
+        <title>Blog - Damien Gonot</title>
+        <meta name="description" content="Damien Gonot's blog" />
+        <meta name="keywords" content="damien, gonot, damien gonot, blog, personal blog" />
+      </Helmet>
       <h1>Blog articles</h1>
       <div>{ Posts }</div>
     </div>
@@ -22,7 +28,6 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
           frontmatter {
             date(formatString: "DD-MM-YYYY")
             path

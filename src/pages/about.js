@@ -1,8 +1,14 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
 
 const About = () => (
   <div>
+    <Helmet>
+      <title>About - Damien Gonot</title>
+      <meta name="description" content="About Damien Gonot" />
+      <meta name="keywords" content="damien, gonot, damien gonot, about, linkedin, github, contact" />
+    </Helmet>
     <h1>
       About
     </h1>
