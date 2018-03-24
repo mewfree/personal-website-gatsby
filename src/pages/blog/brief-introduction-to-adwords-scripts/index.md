@@ -37,15 +37,15 @@ That big scary warning on a yellow background is letting us know we need to auth
 
 Below that is a big (almost) empty canvas where magic will happen.
 
-```
+```javascript
 function main() {
 }
 ```
 
-We must write code inside the `main()` function for it to run. It is customary to try a new programming language/interface by writing a ["Hello, World!" program](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) that simply prints `Hello, World!`. In a normal JavaScript application, this would be `console.log("Hello, World!");` but because AdWords Scripts is a bit different from JavaScript, our program becomes `Logger.log("Hello, World!");`. Please note that single quotes (`'`)  can be used instead of double quotes (`"`), it is just a matter of personal preferences. I will use single quotes for the rest of the tutorial because this is what I prefer.
+We must write code inside the `javascript›main()` function for it to run. It is customary to try a new programming language/interface by writing a ["Hello, World!" program](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) that simply prints `Hello, World!`. In a normal JavaScript application, this would be `javascript›console.log("Hello, World!");` but because AdWords Scripts is a bit different from JavaScript, our program becomes `javascript›Logger.log("Hello, World!");`. Please note that single quotes (`'`)  can be used instead of double quotes (`"`), it is just a matter of personal preferences. I will use single quotes for the rest of the tutorial because this is what I prefer.
 
 Here is what you should have now:
-```
+```javascript
 function main() {
   Logger.log('Hello, World!');
 }
