@@ -57,3 +57,5 @@ You'll see that the Changes section stays empty. That's because we haven't done 
 ![Hello world first result](hello_world_first_result.png)
 
 __Congrats! You've run your first AdWords script!__
+
+You can continue learning more about AdWords Scripts by reading my next article: [AdWords Scripts: Reading Data](/blog/adwords-scripts-reading-data).
