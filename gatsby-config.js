@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: 'Damien Gonot',
+    siteUrl: 'https://www.damiengonot.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-preact',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-favicon',
