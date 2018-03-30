@@ -15,7 +15,7 @@ module.exports = {
         logo: './src/favicon.png',
         injectHTML: true,
         icons: {
-          android: true,
+          android: false,
           appleIcon: true,
           appleStartup: true,
           coast: false,
@@ -55,5 +55,29 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Damien Gonot - Personal Website',
+        short_name: 'Damien Gonot',
+        start_url: '/',
+        display: 'minimal-ui',
+        background_color: '#fff',
+        theme_color: '#6a5acd',
+        icons: [
+          {
+            src: '/favicons/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/favicons/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
+      }
+    },
+    'gatsby-plugin-offline',
   ],
 };
