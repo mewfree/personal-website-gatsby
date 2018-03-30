@@ -10,6 +10,7 @@ import './prism.scss'
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet>
+      <html lang="en" />
       <title>Damien Gonot</title>
       <meta name="description" content={`Damien Gonot's personal website (${new Date().getFullYear()})`} />
       <meta name="keywords" content="damien, gonot, damien gonot, personal" />
