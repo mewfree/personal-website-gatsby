@@ -17,13 +17,15 @@ const TemplateWrapper = ({ children }) => (
     </Helmet>
     <Navbar />
     <Header />
-    <section className="section">
-      <div className="container">
-        <div className="content">
-          {children()}
-        </div>
+    <div className="columns is-centered">
+      <div className="column is-three-fifths">
+        <section className="section">
+          <div className="content">
+            {children()}
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   </div>
 )
 
