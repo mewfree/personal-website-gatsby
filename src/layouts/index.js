@@ -5,7 +5,6 @@ import Helmet from 'react-helmet'
 import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import './index.scss'
-import './prism.scss'
 
 const TemplateWrapper = ({ children }) => (
   <div>

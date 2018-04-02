@@ -2,3 +2,14 @@ $variable-columns: false;
 $primary: #6a5acd;
 $section-padding: 1.5rem 1.5rem;
 @import "~bulma/bulma";
+@import "prism.scss";
+
+// reset Bulma className also used by Prism
+.token.number {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  display: initial;
+  vertical-align: baseline;
+};
