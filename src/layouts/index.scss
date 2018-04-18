@@ -4,6 +4,17 @@ $section-padding: 1.5rem 1.5rem;
 @import "~bulma/bulma";
 @import "prism.scss";
 
+.middle-col {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  word-wrap: break-word;
+}
+
+.content code {
+  word-wrap: inherit;
+}
+
 // reset Bulma className also used by Prism
 .token.number {
   font-size: 100%;
