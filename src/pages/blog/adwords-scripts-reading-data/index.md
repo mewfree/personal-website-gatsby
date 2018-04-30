@@ -52,7 +52,7 @@ function getAllActiveCampaigns() {
 
 Now if you try to run this, it wouldn't do anything, because the loop is basically empty. Let's log the name of the campaign: `javascript›Logger.log(campaign.getName());`.
 
-Let's try to do a bit more. Campaign budget can be easily fetched with `javascript›.getBudget()` but it only returns an integer (for example, for a budget of $100, response will be 100), so let's try to get the currency code too. `javascript›AdWordsApp.currentAccount().getCurrencyCode()` should do!
+Let's try to do a bit more. Campaign budget can be easily fetched with `javascript›.getBudget()` but it only returns an integer (for example, for a budget of $100, the response will be 100), so let's try to get the currency code too. `javascript›AdWordsApp.currentAccount().getCurrencyCode()` should do!
 
 Here is the final result:
 ```javascript

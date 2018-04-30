@@ -18,7 +18,7 @@ Here are a few examples:
 We are going to implement a slightly different version of the first example.
 
 # Raising bids on specific keywords
-Imagine we have big pockets and want to stay at position 2 or better at all times for all keywords.
+Imagine we have big pockets and want to stay in position 2 or better at all times for all keywords.
 First, we'll need to find all keywords with an average position (avg. pos.) worse than 2.
 This should be easy to do thanks to what we've learnt in the [previous tutorial](/blog/adwords-scripts-reading-data).
 Then, we'll raise the bids on those keywords by an arbitrary amount (+10%) in order to try to raise the avg. pos. to 2 or better.
@@ -26,7 +26,7 @@ Then, we'll raise the bids on those keywords by an arbitrary amount (+10%) in or
 ## Fetching keywords with a specific average position
 In order to combine the `javascript›.withCondition()` method with a statistic (like `Average Position`) we have to precise a date range with `javascript›.forDateRange()`.
 AdWords provide a few ready-to-use ranges such as `YESTERDAY`, `LAST_7_DAYS`, `LAST_30_DAYS`...
-Complete list of ranges can be found [here](https://developers.google.com/adwords/scripts/docs/reference/adwordsapp/adwordsapp_keywordselector#forDateRange_2).
+The complete list of ranges can be found [here](https://developers.google.com/adwords/scripts/docs/reference/adwordsapp/adwordsapp_keywordselector#forDateRange_2).
 A custom `dateFrom` and `dateTo` at the `YYYYMMDD` format can also be used (example: `javascript›.forDateRange('20180401', '20180410')` for the first 10 days of April 2018).
 We'll use `LAST_7_DAYS` this time.
 ```javascript
@@ -66,7 +66,7 @@ Now, I commented out the `javascript›keyword.getText()` log in order to protec
 ![keywords_avg_pos](keywords_avg_pos.png)
 
 ## Raising max CPCs on keywords
-Let's take care of the bids now! It's pretty straightforward to do so by using `javascript›.bidding().setCpc()` on the `keyword` entity, but first we need to get the current max CPC to calculate the new bid (remember we want to raise the bids by 10%). This is done by using `javascript›.bidding().getCpc()`. With all this knowledge, final formula is very simple:
+Let's take care of the bids now! It's pretty straightforward to do so by using `javascript›.bidding().setCpc()` on the `keyword` entity, but first, we need to get the current max CPC to calculate the new bid (remember we want to raise the bids by 10%). This is done by using `javascript›.bidding().getCpc()`. With all this knowledge, final formula is very simple:
 ```javascript
   var new_bid = keyword.bidding().getCpc() * 1.1;
   keyword.bidding().setCpc(new_bid);
@@ -74,7 +74,7 @@ Let's take care of the bids now! It's pretty straightforward to do so by using `
 
 This could have fit on one line but putting the calculated bid in its own variable allows for more readability.
 
-I also changed the name of our function as it now not only fetches the keywords but also change the bids.
+I also changed the name of our function as it now not only fetches the keywords but also changes the bids.
 
 ```javascript
 function raiseBidsKeywords() {
@@ -103,5 +103,5 @@ The last step is to press on __Run__ instead of Preview. Be careful, this will c
 
 __Congrats, your AdWords Script made changes on your behalf!__
 
- Now that we're happy with our script, since it looks back on the past 7 days data, wouldn't it be nice if it ran on a weekly basis? On the AdWords Scripts list, you can set the frequency to weekly and choose the day of the week and time that suits you:
+ Now that we're happy with our script since it looks back on the past 7 days data, wouldn't it be nice if it ran on a weekly basis? On the AdWords Scripts list, you can set the frequency to weekly and choose the day of the week and time that suits you:
 ![frequency_change](frequency_change.png)

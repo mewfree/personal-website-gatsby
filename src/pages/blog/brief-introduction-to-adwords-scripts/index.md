@@ -15,7 +15,7 @@ Let's create our first AdWords Script now!
 The easiest way is to take advantage of AdWords' new shortcut feature: by typing <kbd>gt</kbd> anywhere in the interface. After the search prompt appears, simply search for "scripts" and press <kbd>Enter</kbd>.
 ![Result of gt script](gt_script.png)
 
-Or going through the actual interface menus, click on the wrench icon at the top-right corner and you'll find "Scripts" in the "Bulk actions" section.
+Or going through the actual interface menus, click on the wrench icon in the top-right corner and you'll find "Scripts" in the "Bulk actions" section.
 ![Actual interface](full_interface_scripts.png)
 
 ### Using the old AdWords interface
@@ -33,7 +33,7 @@ You can name it however you want. I will name mine "Our first AdWords Script". A
 
 You can ignore the "Advanced APIs" button for now as it is used only to connect to other Google Services like BigQuery etc...
 
-That big scary warning on a yellow background is letting us know we need to authorize the script before it can make actions on our AdWords account. It is safe to go ahead and authorize it now as our script is not doing anything yet. We might need to re-authorize it in the future if we connect the script to read/write data to Google Spreadsheets for example.
+That big scary warning on a yellow background is letting us know we need to authorize the script before it can take actions on our AdWords account. It is safe to go ahead and authorize it now as our script is not doing anything yet. We might need to re-authorize it in the future if we connect the script to read/write data to Google Spreadsheets for example.
 
 Below that is a big (almost) empty canvas where magic will happen.
 
@@ -51,7 +51,7 @@ function main() {
 }
 ```
 
-You can go ahead and press the Preview button. It will automatically save your script and run it in preview mode. When scripts are run in "Preview", they don't actually run against your AdWords account and don't make any changes yet. Only when you press the Run button your scripts will modify the actual AdWords account. For now we'll only use Preview.
+You can go ahead and press the Preview button. It will automatically save your script and run it in preview mode. When scripts are run in "Preview", they don't actually run against your AdWords account and don't make any changes yet. Only when you press the Run button your scripts will modify the actual AdWords account. For now, we'll only use Preview.
 
 You'll see that the Changes section stays empty. That's because we haven't done any actions on our AdWords entities yet and have only played with the Logs. So click on the Logs section and this is what you should see:
 ![Hello world first result](hello_world_first_result.png)
