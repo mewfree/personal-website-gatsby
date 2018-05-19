@@ -15,6 +15,18 @@ $section-padding: 1.5rem 1.5rem;
   word-wrap: inherit;
 }
 
+.post-link {
+  margin-bottom: 15px;
+}
+
+.article-header {
+  padding: 20px;
+}
+
+.article-footer {
+  padding-top: 500px;
+}
+
 // reset Bulma className also used by Prism
 .token.number {
   font-size: 100%;

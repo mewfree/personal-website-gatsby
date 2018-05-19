@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const PostLink = ({ post }) => (
-  <div>
+  <div className="post-link">
     <div className="is-size-3 has-text-weight-semibold">
       <Link to={ post.frontmatter.path }>
         { post.frontmatter.title }

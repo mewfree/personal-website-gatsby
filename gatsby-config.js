@@ -43,6 +43,7 @@ module.exports = {
             options: {
               maxWidth: 800,
               sizeByPixelDensity: true,
+              wrapperStyle: 'margin: 40px',
             },
           },
           {
