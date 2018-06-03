@@ -10,9 +10,11 @@ export default function Template({
   return (
     <div>
       <Helmet>
-        <title>{`${frontmatter.title} - Damien Gonot`}</title>
+        <title>{ `${frontmatter.title} - Damien Gonot` }</title>
         <meta name="description" content={ excerpt } />
         <meta name="keywords" content={ frontmatter.tags.toString() } />
+        <meta property="og:title" content={ `${frontmatter.title} - Damien Gonot` } />
+        <meta property="og:description" content={ excerpt } />
       </Helmet>
       <div>
         <Link to="/blog">{'<< Go back to all articles'}</Link>
