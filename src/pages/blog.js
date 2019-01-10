@@ -1,6 +1,8 @@
 import React from 'react'
-import PostLink from '../components/PostLink'
 import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
+import PostLink from '../components/PostLink'
+import Layout from '../components/layout'
 
 const Blog = ({ data: { allMarkdownRemark: { edges } } }) => {
   const Posts = edges
@@ -8,15 +10,17 @@ const Blog = ({ data: { allMarkdownRemark: { edges } } }) => {
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
 
   return (
-    <div className="has-text-centered">
-      <Helmet>
-        <title>Blog - Damien Gonot</title>
-        <meta name="description" content="Damien Gonot's blog" />
-        <meta name="keywords" content="damien, gonot, damien gonot, blog, personal blog" />
-      </Helmet>
-      <h1>Blog articles</h1>
-      <div>{ Posts }</div>
-    </div>
+    <Layout>
+      <div className="has-text-centered">
+        <Helmet>
+          <title>Blog - Damien Gonot</title>
+          <meta name="description" content="Damien Gonot's blog" />
+          <meta name="keywords" content="damien, gonot, damien gonot, blog, personal blog" />
+        </Helmet>
+        <h1>Blog articles</h1>
+        <div>{ Posts }</div>
+      </div>
+    </Layout>
   )
 }
 

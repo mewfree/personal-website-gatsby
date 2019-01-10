@@ -1,5 +1,6 @@
 import React from 'react'
-// import Link from 'gatsby-link'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
 import PostLink from '../components/PostLink'
 
 const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => {
@@ -8,7 +9,7 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => {
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
 
   return (
-    <div>
+    <Layout>
       <h1>
         Introduction
       </h1>
@@ -32,7 +33,7 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => {
           <a href="https://github.com/kiasaki/ry-v02">ry, a basic modal text editor, written in Chicken Scheme</a>
         </li>
       </ul>
-    </div>
+    </Layout>
   )
 }
 
