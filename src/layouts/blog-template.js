@@ -1,6 +1,7 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
 
 export default function Template({
   data,
@@ -8,7 +9,7 @@ export default function Template({
   const { markdownRemark } = data
   const { frontmatter, html, excerpt } = markdownRemark
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>{ `${frontmatter.title} - Damien Gonot` }</title>
         <meta name="description" content={ excerpt } />
@@ -34,7 +35,7 @@ export default function Template({
           Damien Gonot, { frontmatter.year }
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link, { withPrefix } from 'gatsby-link'
+import { Link, withPrefix } from 'gatsby'
 
 class Navbar extends React.Component {
   constructor(props) {

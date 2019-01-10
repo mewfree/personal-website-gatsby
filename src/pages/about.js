@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
 
 const About = () => (
-  <div>
+  <Layout>
     <Helmet>
       <title>About - Damien Gonot</title>
       <meta name="description" content="About Damien Gonot" />
@@ -33,7 +33,7 @@ const About = () => (
     <h1>
       λ
     </h1>
-  </div>
+  </Layout>
 )
 
 export default About

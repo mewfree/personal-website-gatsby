@@ -21,7 +21,7 @@ const TemplateWrapper = ({ children }) => (
       <div className="container">
         <div className="content">
           <div className="middle-col">
-            { children() }
+            { children }
           </div>
         </div>
       </div>

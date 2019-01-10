@@ -6,7 +6,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
-    'gatsby-plugin-preact',
+    // 'gatsby-plugin-preact',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     {
@@ -43,7 +43,6 @@ module.exports = {
             options: {
               maxWidth: 800,
               sizeByPixelDensity: true,
-              wrapperStyle: 'margin: 40px',
             },
           },
           {
