@@ -6,7 +6,8 @@ import Layout from '../components/layout'
 export default function Template({
   data,
 }) {
-  const { markdownRemark } = data
+  const { site, markdownRemark } = data
+  const { siteUrl } = site.siteMetadata
   const { frontmatter, html, excerpt } = markdownRemark
   return (
     <Layout>
@@ -16,6 +17,7 @@ export default function Template({
         <meta name="keywords" content={ frontmatter.tags.toString() } />
         <meta property="og:title" content={ `${frontmatter.title} - Damien Gonot` } />
         <meta property="og:description" content={ excerpt } />
+        <link rel="canonical" href={ `${siteUrl}${frontmatter.path}` } />
       </Helmet>
       <div>
         <Link to="/blog">{'<< Go back to all articles'}</Link>
@@ -50,6 +52,11 @@ export const pageQuery = graphql`
         path
         title
         tags
+      }
+    }
+    site {
+      siteMetadata {
+        siteUrl
       }
     }
   }
