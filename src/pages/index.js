@@ -30,6 +30,15 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => {
       </h1>
       <ul>
         <li>
+          <a href="https://github.com/mewfree/youtube-dl-subscriptions">youtube-dl-subscriptions, a Python script to download YouTube videos from your subscription box</a>
+        </li>
+        <li>
+          <a href="https://github.com/mewfree/gitart">gitart, a Racket script inspired by gitfiti to generate GitHub "contributions art"</a>
+        </li>
+        <li>
+          <a href="https://github.com/mewfree/mileend-roulette">Mile End Roulette, a (random) way to suggest where to get eats & drinks in Mile End, Montréal</a>
+        </li>
+        <li>
           <a href="https://github.com/kiasaki/ry-v02">ry, a basic modal text editor, written in Chicken Scheme</a>
         </li>
       </ul>
