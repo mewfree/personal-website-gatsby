@@ -1,13 +1,13 @@
 ---
 path: "/blog/adwords-google-spreadsheets"
 date: "2018-05-10"
-title: "Connecting AdWords Scripts with Google Spreadsheets"
-tags: ["adwords", "scripts", "adwords scripts", "google spreadsheets", "spreadsheets", "connection"]
+title: "Connecting Google Ads Scripts with Google Spreadsheets"
+tags: ["google ads", "adwords", "scripts", "google ads scripts", "adwords scripts", "google spreadsheets", "spreadsheets", "connection"]
 ---
 
-Today we'll learn one of the most powerful tools of AdWords Scripts: being able to read/write data to and from Google Spreadsheets. It is definitely one of my favourite features and I am really excited to share this with you.
+Today we'll learn one of the most powerful tools of Google Ads scripts: being able to read/write data to and from Google Spreadsheets. It is definitely one of my favourite features and I am really excited to share this with you.
 
-# How to read Google Spreadsheets data from AdWords Scripts
+# How to read Google Spreadsheets data from Google Ads scripts
 ## Opening our spreadsheet
 The first step in reading Google Spreadsheets data is to choose which Spreadsheet we want to work from 🙂.
 Hopefully, you already have a specific project/sheet in mind.
@@ -29,7 +29,7 @@ function main() {
 }
 ```
 
-If you run or preview this in AdWords Scripts, you'll notice we have to give additional permissions so that the script is able to run:
+If you run or preview this in Google Ads scripts, you'll notice we have to give additional permissions so that the script is able to run:
 ![New permissions](scripts_permissions.png)
 
 After this is done, you should be able to see your spreadsheet's name in the logs.
@@ -119,8 +119,8 @@ Philadelphia
 
 Amazing! Now it would be possible to combine this script and the one from my [Programmatically Create Ads](/blog/adwords-scripts-create-ads) article to automatically create ads based on spreadsheet data!
 
-# How to write data from AdWords Scripts to Google Spreadsheets
-I'm going to re-use knowledge from [AdWords Scripts: Reading Data](/blog/adwords-scripts-reading-data) to read ad group data from a specific campaign and write it to our [example spreadsheet](https://docs.google.com/spreadsheets/d/1ARKwW_kAf8rJJ9_XP4kl__kc56inghZdBtNrClfRlvc/edit).
+# How to write data from Google Ads scripts to Google Spreadsheets
+I'm going to re-use knowledge from [Google Ads Scripts: Reading Data](/blog/adwords-scripts-reading-data) to read ad group data from a specific campaign and write it to our [example spreadsheet](https://docs.google.com/spreadsheets/d/1ARKwW_kAf8rJJ9_XP4kl__kc56inghZdBtNrClfRlvc/edit).
 
 Let's put all of that data in an array first. We can iterate over the array and push every ad group name and ID in the array. I initiated the data array with column headers.
 
@@ -132,7 +132,7 @@ function main() {
 
   var sheet = spreadsheet.getSheetByName('write');
 
-  var adGroups = AdWordsApp
+  var adGroups = AdsApp
     .adGroups()
     .withCondition('CampaignName = "united_states-cities"')
     .get();
@@ -177,7 +177,7 @@ function main() {
 
   var sheet = spreadsheet.getSheetByName('write');
 
-  var adGroups = AdWordsApp
+  var adGroups = AdsApp
     .adGroups()
     .withCondition('CampaignName = "united_states-cities"')
     .get();
@@ -215,7 +215,7 @@ Just a warning that previewing the script will actually write the data in the sp
 ## Spreadsheet Result
 ![write sheet result](write_sheet_result.png)
 
-This is really useful if you're interested in having your own custom dashboard right in Google Spreadsheets. If you want to have this data updated automatically every day, I would suggest turning on daily updates through AdWords Scripts' frequency feature available on the AdWords Scripts homepage:
+This is really useful if you're interested in having your own custom dashboard right in Google Spreadsheets. If you want to have this data updated automatically every day, I would suggest turning on daily updates through Google Ads scripts' frequency feature available on the Google Ads scripts homepage:
 ![daily frequency](daily_frequency.png)
 
 **Your spreadsheet will now be updated every day at your desired time with your campaigns/ad groups data!**
