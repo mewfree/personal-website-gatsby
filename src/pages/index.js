@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import PostLink from '../components/PostLink'
 
@@ -25,6 +25,9 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => {
       <p>
         { RecentPosts }
       </p>
+      <h1>
+        <Link to="/blog">See all articles</Link>
+      </h1>
       <h1>
         Projects I contributed to
       </h1>
