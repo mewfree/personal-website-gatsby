@@ -51,7 +51,7 @@ print(my_accounts)
 
 Save it under `index.py` (for example) and run it. You should see something similar appear in your terminal:
 
-![get ad accounts](get_ad_accounts.png)
+![get fb accounts](get_fb_accounts.png)
 
 🚀 Congrats! You've run your first Facebook Marketing API-based script.
 
