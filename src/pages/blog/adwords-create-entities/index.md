@@ -1,12 +1,12 @@
 ---
 path: "/blog/adwords-scripts-create-ads"
 date: "2018-04-20"
-title: "AdWords Scripts: Programmatically Create Ads"
+title: "Google Ads Scripts: Programmatically Create Ads"
 tags: ["adwords", "scripts", "adwords scripts", "automatically", "programmatically", "create entities", "create ad groups", "create keywords", "create ads"]
 ---
 
-# How to create entities from AdWords Scripts
-Today I'm going to introduce a new concept from AdWords Scripts: `Builders`!
+# How to create entities from Google Ads scripts
+Today I'm going to introduce a new concept from Google Ads scripts: `Builders`!
 For reasons unknown to me, builders are available for ad groups, keywords and ads but not campaigns...
 Though I might share a few tricks with you later on how to circumvent that 😉.
 
@@ -17,11 +17,11 @@ Let's start off with a new script. I'll personally call it "new US cities".
 # Building the ad groups
 To create a new ad group, you need to first select a campaign. Campaigns can be selected by ID or by campaign name.
 
-I went ahead and manually created a new search campaign called `united_states-cities` as AdWords won't allow us to create a campaign through AdWords Scripts yet. You can also use an existing campaign.
+I went ahead and manually created a new search campaign called `united_states-cities` as Google Ads won't allow us to create a campaign through Google Ads scripts yet. You can also use an existing campaign.
 
-If you know the ID of your campaign (you can add `campaign ID` as a column in the AdWords interface) then that is the safest way to select a campaign while being sure you're not selecting anything else (which might happen if you have campaigns with similar names).
+If you know the ID of your campaign (you can add `campaign ID` as a column in the Google Ads interface) then that is the safest way to select a campaign while being sure you're not selecting anything else (which might happen if you have campaigns with similar names).
 ```javascript
-var campaign = AdwordsApp.campaigns()
+var campaign = AdsApp.campaigns()
     .withIds([1374655888])
     .get()
     .next();
@@ -29,7 +29,7 @@ var campaign = AdwordsApp.campaigns()
 
 Selecting a campaign by name (less safe but more human-friendly):
 ```javascript
-var campaign = AdWordsApp.campaigns()
+var campaign = AdsApp.campaigns()
     .withCondition("Name = 'united_states-cities'")
     .withLimit(1)
     .get()
@@ -39,7 +39,7 @@ I threw a `javascript›.withLimit(1)` in there just to be sure we're only selec
 
 Once we've selected the campaign in which we want to create our new ad groups, this is how adding a new ad group is done:
 ```javascript
-var campaign = AdWordsApp.campaigns()
+var campaign = AdsApp.campaigns()
     .withCondition("Name = 'united_states-cities'")
     .withLimit(1)
     .get()
@@ -58,7 +58,7 @@ I added `javascript›.withStatus('PAUSED')` as a safety measure to make sure we
 If you preview the above script in your `javascript›main()` function, for the first time you should see something in the CHANGES section:
 ![ad group builder preview](ag_builder_preview.png)
 
-As always, this is what our AdWords Script would do if it was actually run.
+As always, this is what our Google Ads Script would do if it was actually run.
 
 As a fake bike repair shop owner for the purpose of this tutorial, I have a list of cities where my shops are located that I want to advertise on Google Search. Lists (called arrays in JavaScript) are defined this way: `javascript›var cities = ['New York City', 'Los Angeles', 'Chicago', 'Houston', 'Philadelphia'];`
 
@@ -66,7 +66,7 @@ It is also possible to read such a list from a Google Spreadsheet but I'll leave
 
 We'd probably want to create an ad group for each of those cities:
 ```javascript
-  var campaign = AdWordsApp.campaigns()
+  var campaign = AdsApp.campaigns()
       .withCondition("Name = 'united_states-cities'")
       .withLimit(1)
       .get()
@@ -104,7 +104,7 @@ Keywords are built using the same technique as ad groups but with some specifici
 
  I chose to follow the first solution but anything is possible!
 
-First, we'll need to modify our previous script a bit to get the "result" (the newly created ad group) back through `javascript›.getResult()`. Afterwards, we'll need to decide what keywords we want to add. It is a good idea to use broad match modifiers (sometimes shortened as BMM) as AdWords might be a bit overzealous with regular broad match keywords. Here is a short list using Chicago as an example:
+First, we'll need to modify our previous script a bit to get the "result" (the newly created ad group) back through `javascript›.getResult()`. Afterwards, we'll need to decide what keywords we want to add. It is a good idea to use broad match modifiers (sometimes shortened as BMM) as Google Ads might be a bit overzealous with regular broad match keywords. Here is a short list using Chicago as an example:
 - +bike +repair +chicago
 - +bike +repair +shop +chicago
 - +bike +shop +chicago
@@ -154,7 +154,7 @@ Now take a look at the preview results.
 
 # 😍
 
-Improvements on this part of the script would be to include more keywords (like "bicycle shop" instead of only "bike shop") as well as adding phrase match keywords & exact match keywords but you should be able to figure it out 😉. Remember that AdWords can infer the match type through the keyword text, for example: `"bike repair shop chicago"` is a phrase match keyword and `[bike repair shop chicago]` is an exact match keyword so you only need to prepend and append either double quotes or square brackets around our keyword text template and that's it!
+Improvements on this part of the script would be to include more keywords (like "bicycle shop" instead of only "bike shop") as well as adding phrase match keywords & exact match keywords but you should be able to figure it out 😉. Remember that Google Ads can infer the match type through the keyword text, for example: `"bike repair shop chicago"` is a phrase match keyword and `[bike repair shop chicago]` is an exact match keyword so you only need to prepend and append either double quotes or square brackets around our keyword text template and that's it!
 
 # Every ad campaign needs... Expanded Text Ads
 You know the drill now! Expanded text ads have their own builder:
@@ -177,7 +177,7 @@ Some stuff to keep in mind:
 After some customization, this is what our final script looks like:
 ```javascript
 function main() {
-  var campaign = AdWordsApp.campaigns()
+  var campaign = AdsApp.campaigns()
       .withCondition("Name = 'united_states-cities'")
       .withLimit(1)
       .get()
