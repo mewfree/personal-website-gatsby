@@ -14,20 +14,20 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => {
         Introduction
       </h1>
       <p>
-        All-in-one marketer & developer. Currently a User Acquisition Manager at Hopper, previously at Busbud.
+        Marketing automation specialist. Currently a User Acquisition Manager at Hopper, previously at Busbud.
       </p>
       <p>
-        Proudly living in Montréal ❤️
+        Living in Montréal ❤️
       </p>
       <h1>
-        Recent blog posts
+        Most recent blog articles
       </h1>
       <p>
         { RecentPosts }
       </p>
-      <h1>
+      <h2>
         <Link to="/blog">See all articles</Link>
-      </h1>
+      </h2>
       <h1>
         Projects I contributed to
       </h1>
