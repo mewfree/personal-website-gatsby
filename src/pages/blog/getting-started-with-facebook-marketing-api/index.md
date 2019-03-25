@@ -1,7 +1,7 @@
 ---
 path: "/blog/getting-started-with-facebook-marketing-api"
 date: "2019-02-20"
-title: "Getting Started With Facebook Marketing API"
+title: "Getting Started with Facebook Marketing API"
 tags: ["facebook", "marketing", "api", "facebook marketing api", "martech"]
 ---
 
