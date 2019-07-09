@@ -5,7 +5,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "bulma": "^0.7.2",
-    "gatsby": "^2.0.0",
+    "gatsby": "^2.1.0",
     "gatsby-plugin-favicon": "^3.1.5",
     "gatsby-plugin-manifest": "^2.0.13",
     "gatsby-plugin-offline": "^2.0.21",
@@ -20,8 +20,8 @@
     "gatsby-transformer-remark": "^2.2.0",
     "node-sass": "^4.11.0",
     "prismjs": "^1.15.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0"
   },
   "main": "n/a",
