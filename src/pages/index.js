@@ -2,11 +2,15 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import PostLink from '../components/PostLink'
+import ProjectLink from '../components/ProjectLink'
 
-const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => {
+const IndexPage = ({ data: { allMarkdownRemark: { edges }, site: { siteMetadata: { projects } } } }) => {
   const RecentPosts = edges
     .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
+
+  const Projects = projects
+    .map(project => <ProjectLink key={project.title} project={project} />);
 
   return (
     <Layout>
@@ -22,29 +26,18 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => {
       <h1>
         Most recent blog articles
       </h1>
-      <p>
+      <div>
         { RecentPosts }
-      </p>
+      </div>
       <h2>
         <Link to="/blog">See all articles</Link>
       </h2>
       <h1>
-        Projects I contributed to
+        Latest projects
       </h1>
-      <ul>
-        <li>
-          <a href="https://github.com/mewfree/youtube-dl-subscriptions">youtube-dl-subscriptions, a Python script to download YouTube videos from your subscription box</a>
-        </li>
-        <li>
-          <a href="https://github.com/mewfree/gitart">gitart, a Racket script inspired by gitfiti to generate GitHub "contributions art"</a>
-        </li>
-        <li>
-          <a href="https://github.com/mewfree/mileend-roulette">Mile End Roulette, a (random) way to suggest where to get eats & drinks in Mile End, Montréal</a>
-        </li>
-        <li>
-          <a href="https://github.com/kiasaki/ry-v02">ry, a basic modal text editor, written in Chicken Scheme</a>
-        </li>
-      </ul>
+      <div>
+        { Projects }
+      </div>
     </Layout>
   )
 }
@@ -65,6 +58,15 @@ export const pageQuery = graphql`
             path
             title
           }
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        projects {
+          title,
+          description,
+          link
         }
       }
     }

@@ -2,6 +2,28 @@ module.exports = {
   siteMetadata: {
     title: 'Damien Gonot',
     siteUrl: 'https://www.damiengonot.com',
+    projects: [
+      {
+        title: 'sheetimport',
+        description: 'a Python script to import local CSV files into Google Spreadsheet',
+        link: 'https://github.com/mewfree/sheetimport',
+      },
+      {
+        title: 'youtube-dl-subscriptions',
+        description: 'a Python script to download YouTube videos from your subscription box',
+        link: 'https://github.com/mewfree/youtube-dl-subscriptions',
+      },
+      {
+        title: 'gitart',
+        description: 'a Racket script inspired by gitfiti to generate GitHub "contributions art"',
+        link: 'https://github.com/mewfree/gitart',
+      },
+      {
+        title: 'mileend-roulette',
+        description: 'a (random) way to suggest where to get eats & drinks in Mile End, Montréal',
+        link: 'https://github.com/mewfree/mileend-roulette',
+      },
+    ]
   },
   plugins: [
     'gatsby-plugin-react-helmet',
