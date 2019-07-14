@@ -80,7 +80,7 @@ In the Google Ads scripts interface, your *running* campaigns and with their res
 (Obviously, your own results will differ from mine 😊).
 
 ## Getting a list of ad groups
-From what we've just learnt with how to read campaigns above, getting a list of ad groups will be really easy. We only need to switch `javascript›AdsApp.campaigns()` with `javacript›AdsApp.adGroups()` as well as some variables' names.
+From what we've just learnt with how to read campaigns above, getting a list of ad groups will be really easy. We only need to switch `javascript›AdsApp.campaigns()` with `javascript›AdsApp.adGroups()` as well as some variables' names.
 ```javascript
 function getAllAdGroups() {
   var adGroups = AdsApp
