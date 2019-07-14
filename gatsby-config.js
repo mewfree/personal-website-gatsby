@@ -30,6 +30,7 @@ module.exports = {
     'gatsby-plugin-sass',
     // 'gatsby-plugin-preact',
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-favicon',
@@ -64,7 +65,6 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 800,
-              sizeByPixelDensity: true,
             },
           },
           {
