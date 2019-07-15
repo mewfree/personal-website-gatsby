@@ -33,7 +33,7 @@ const About = () => (
     <h1>
       Contact form
     </h1>
-    <form name="contact" method="POST" data-netlify="true">
+    <form name="contact" method="POST" netlify-honeypot="fake-field" data-netlify="true">
       <div className="field is-horizontal">
         <div className="field-label">
           <label className="label">From</label>
@@ -53,6 +53,18 @@ const About = () => (
               <span className="icon is-small is-left">
                 <i className="fas fa-envelope" />
               </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="field is-horizontal is-hidden">
+        <div className="field-label">
+          <label className="label">Don't fill if you're a human</label>
+        </div>
+        <div className="field-body">
+          <div className="field">
+            <div className="control">
+              <input className="input" name="fake-field" />
             </div>
           </div>
         </div>
