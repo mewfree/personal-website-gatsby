@@ -31,6 +31,58 @@ const About = () => (
       Email: damien.gonot@gmail.com
     </p>
     <h1>
+      Contact form
+    </h1>
+    <form name="contact" method="POST" data-netlify="true">
+      <div className="field is-horizontal">
+        <div className="field-label">
+          <label className="label">From</label>
+        </div>
+        <div className="field-body">
+          <div className="field">
+            <div className="control is-expanded has-icons-left">
+              <input className="input" type="text" name="name" placeholder="Name" />
+              <span className="icon is-small is-left">
+                <i className="fas fa-user" />
+              </span>
+            </div>
+          </div>
+          <div className="field">
+            <div className="control is-expanded has-icons-left">
+              <input className="input" type="email" name="email" placeholder="Email" />
+              <span className="icon is-small is-left">
+                <i className="fas fa-envelope" />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="field is-horizontal">
+        <div className="field-label">
+          <label className="label">Message</label>
+        </div>
+        <div className="field-body">
+          <div className="field">
+            <div className="control">
+              <textarea className="textarea" name="message" placeholder="Leave a message" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="field is-horizontal">
+        <div className="field-label" />
+        <div className="field-body">
+          <div className="field">
+            <div className="control">
+              <button className="button is-primary" type="submit">
+                Send message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <h1>
       λ
     </h1>
   </Layout>
