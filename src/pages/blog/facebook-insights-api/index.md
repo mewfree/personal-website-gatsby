@@ -26,7 +26,7 @@ access_token = 'REPLACE_BY_YOUR_ACCESS_TOKEN'
 
 FacebookAdsApi.init(app_id, app_secret, access_token)
 
-insights = AdAccount('act_******************').get_insights()
+insights = AdAccount('act_****************').get_insights()
 
 print(insights)
 ```
@@ -37,7 +37,7 @@ Facebook automatically picks the last 30 days date range, impressions and spend 
 Result:
 ```python
 [<AdsInsights> {
-    "account_id": "*****************",
+    "account_id": "****************",
     "date_start": "2019-04-13",
     "date_stop": "2019-05-12",
     "impressions": "*****",
@@ -68,7 +68,7 @@ print(insights)
 Result:
 ```python
 [<AdsInsights> {
-    "account_id": "*****************",
+    "account_id": "****************",
     "campaign_id": "******************",
     "date_start": "2019-05-03",
     "date_stop": "2019-06-01",
@@ -113,7 +113,7 @@ Those date presets can be passed as parameters to our `get_insights()` query, se
 
 params = {'date_preset': 'last_7d'}
 
-insights = AdAccount('act_******************').get_insights(params = params)
+insights = AdAccount('act_****************').get_insights(params = params)
 
 print(insights)
 ```
@@ -128,7 +128,7 @@ If you want data from a specific time range not included in the presets above, y
 
 params = {'time_range': {'since': '2019-01-01', 'until': '2019-01-05'}}
 
-insights = AdAccount('act_******************').get_insights(params = params)
+insights = AdAccount('act_****************').get_insights(params = params)
 
 print(insights)
 ```
@@ -136,7 +136,7 @@ print(insights)
 You can confirm the query is working as the result includes a `date_start` and `date_stop`:
 ```python
 [<AdsInsights> {
-    "account_id": "*****************",
+    "account_id": "****************",
     "date_start": "2019-01-01",
     "date_stop": "2019-01-05",
     "impressions": "*******",
@@ -162,7 +162,7 @@ fields = [
     'spend',
 ]
 
-insights = AdAccount('act_******************').get_insights(
+insights = AdAccount('act_****************').get_insights(
     params = params, fields = fields
 )
 
@@ -200,7 +200,7 @@ fields = [
     'actions',
 ]
 
-insights = AdAccount('act_******************').get_insights(
+insights = AdAccount('act_****************').get_insights(
     params = params, fields = fields
 )
 
@@ -277,7 +277,7 @@ fields = [
     'actions',
 ]
 
-insights = AdAccount('act_1271637826192898').get_insights(
+insights = AdAccount('act_****************').get_insights(
     params = params, fields = fields
 )
 
