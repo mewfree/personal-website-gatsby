@@ -16,7 +16,7 @@ In the [previous article](/blog/guide-facebook-insights-api), we saw how to get 
 
 This is how "level" comes into consideration.
 
-Here is a sample code for account results at the campaign level that should be familiar from [my previous article](/blog/guide-facebook-insights-api).
+Here is a sample Python code for account results at the campaign level that should be familiar from [my previous article](/blog/guide-facebook-insights-api).
 
 ```python
 from facebook_business.api import FacebookAdsApi
@@ -83,7 +83,7 @@ Add a `sort` param in your list of params. As it's possible to sort by multiple 
 
 Example: `spend_descending` to sort results by spend, from highest to lowest.
 
-### Sample code:
+### Sample Python code:
 ```python
 (...)
 
