@@ -295,4 +295,6 @@ That's all for now but there are still a few details to cover:
 - breakdown by time/day and other factors
 - attribution windows
 
-Thank you for reading and stay tuned for part 2! Do not hesitate to [contact me](/about) in the meantime if you have any questions.
+Thank you for reading and ~~stay tuned for part 2~~! Do not hesitate to [contact me](/about) if you still have any questions.
+
+__2020-01-21 Update: I've finally published the [part 2 of Guide to Facebook Insights API](/blog/guide-facebook-insights-api-2)!__
