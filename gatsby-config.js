@@ -39,11 +39,11 @@ module.exports = {
         injectHTML: true,
         icons: {
           android: false,
-          appleIcon: true,
-          appleStartup: true,
+          appleIcon: false,
+          appleStartup: false,
           coast: false,
           favicons: true,
-          firefox: true,
+          firefox: false,
           twitter: false,
           yandex: false,
           windows: false
